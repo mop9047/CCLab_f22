@@ -1,3 +1,4 @@
+
 let sketch = function (p) {
   let stars = [];
   let balls = [];
@@ -56,7 +57,8 @@ let sketch = function (p) {
   }
 
   p.setup = function () {
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    let canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+    canvas.parent("canvasContainer");
     p.rectMode(p.CENTER);
     c1 = p.color(32, 0, 51);
     c2 = p.color(81, 0, 164);
@@ -378,7 +380,8 @@ let sketch2 = function(p){
 p.setup = function() {
   p.colorMode(p.HSL);
   p.rectMode(p.CENTER);
-  p.createCanvas(p.windowWidth, p.windowHeight);
+  let canvas = p.createCanvas(p.windowWidth*0.5, p.windowHeight*0.8);
+  canvas.parent("canvasContainer2");
   for (let i = 0; i < 70; i++) {
     stars.push(new particle(p.random(p.width), p.random(p.height)));
   }

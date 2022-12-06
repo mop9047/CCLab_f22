@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgb(32,0,51), rgb(26, 0, 51));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#content{
+  width:60%;
+  margin:auto;
+  margin-top: 5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 10px 10px 50px 8px rgb(0, 0, 0);
+}
+
+p{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 10px 10px 50px 8px rgb(0, 0, 0);
+  padding: 30px;
+}
+
+#inside{
+  margin-right: 55%;
+  margin-top: 5%;
+}
+
+h1{
+  text-align: center;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  border-left: 0;
+  border-right: 0;
+  box-shadow: 10px 10px 50px 8px rgb(0, 0, 0);
+  /* margin-top: 50px; */
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(https://toppng.com/uploads/preview/planets-dark-shadow-space-11569851417r2skrueim9.jpg);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  /* background: #f83d23; */
+  /* width: 100px;
+  height: 100px; */
+  right:0;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  float: right;
+}
+
+.wrapper {
+  width: 95%;
+  margin: auto;
+  /* background-color: #ccc; */
+  align-content: top;
+}
+.wrapper {
+  height: 1200px;
+  margin-top: 5%;
+}
+
+@media (min-height: 768px) {
+  #wrapper{
+    height: 2000px;
+  }
+}
