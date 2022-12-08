@@ -558,4 +558,72 @@ p.mousePressed = function() {
 
 var myp5 = new p5(sketch2, 'c2');
 
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 
+let sketch3 = function (p) {
+  let timer = 0;
+  p.setup = function() {
+    let canvas = p.createCanvas(p.windowHeight * 0.6, p.windowHeight * 0.6);
+    canvas.parent("canvasContainer3");
+    p.angleMode(p.DEGREES);
+    p.colorMode(p.RGB);
+  }
+
+  p.draw = function() {
+    p.push()
+    p.background(250);
+      fastY = p.map(p.mouseY, 0, p.windowHeight, -p.height / 15, p.height / 15);
+      slowY = p.map(p.mouseY, 0, p.windowHeight, -p.height / 20, p.height / 20);
+      slowerY = p.map(p.mouseY, 0, p.windowHeight, -p.height / 30, p.height / 30);
+
+      fastX = p.map(p.mouseX, 0, p.windowWidth, -p.width / 15, p.width / 15);
+      slowX = p.map(p.mouseX, 0, p.windowWidth, -p.width / 20, p.width / 20);
+      slowerX = p.map(p.mouseX, 0, p.windowWidth, -p.width / 30, p.width / 30);
+    p.translate(p.width / 2, p.height / 2);
+    p.push();
+    //fill('rgba(255,0,0)')
+    p.stroke(255);
+    time = timer;
+    noiseVal = p.map(p.noise(time), 0, 10, 0, 300);
+    func = (p.width / 4) * p.sin(time) + noiseVal;
+    func1 = (p.width / 4) * p.cos(time) + noiseVal;
+
+    mover = (p.pmouseX - p.mouseX) * 0.5;
+    timer = timer + 1 + mover;
+
+    p.fill(150);
+    p.rect(-p.width, -p.height, 2 * p.width, 2 * p.height);
+    
+    p.pop();
+    p.scale(1)
+    if(p.mouseIsPressed){
+      p.translate(p.random(10),p.random(10))
+    }
+    p.noStroke();
+    p.fill(100);
+    p.ellipse(0, 0, p.width / 2);
+    p.fill(200);
+    p.ellipse(0, 0, (p.width * 0.9) / 2);
+    p.fill(0);
+    p.ellipse(0, 0, (p.width * 0.85) / 2);
+    for (x = 0; x < 100; x++) {
+      yaya = p.map(x, 0, 100, 0, 250);
+      p.fill(yaya / 4, 0, yaya);
+      p.ellipse(slowerX, slowerY, (p.width * 0.7) / 2 - x);
+    }
+    p.fill(50, 0, 200);
+    p.ellipse(slowX, slowY, (p.width * 1) / 10);
+
+    p.fill(255, 255, 0);
+    p.ellipse(fastX, fastY, (p.width * 1) / 60);
+    
+      p.pop()
+  }
+};
+
+var myp5 = new p5(sketch3, 'c3');
