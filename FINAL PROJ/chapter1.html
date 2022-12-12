@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,9 +13,14 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+
   <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+  <script language="javascript" src="libraries/p5.dom.js"></script> -->
   <!-- Uncomment the line below if you use audio. -->
-  <!-- <script src="libraries/p5.sound.min.js"></script> -->
+  <script src="libraries/p5.sound.min.js"></script>
 </head>
 
 <body>
@@ -21,15 +29,13 @@
   </div>
 
   <p class="outerhologram">
-    <i class="material-icons" style="text-align: left;">settings_ethernet</i>
-    Scroll down to read story
-    <i class="material-icons" style="text-align: left;">settings_ethernet</i>
+    [  Click on the hologram to move to next message  ]
   </p>
 
   <div>
-    <img src="1holo.png" style="width: 70%; margin-left: 15%;"></img>
+    <img src="1holo.png" style="width: 70%; margin-left: 15%; margin-bottom: -5px;"></img>
     
-    <div class="middlecons"> 
+    <!-- <div class="middlecons"> 
       It has been far too long since I have reached the end of connection to earth.
       I feel agony in my isolation. I am left with no one else but myself.
       But my mission is far too important. All responsibilities rests on my shoulders.
@@ -47,7 +53,9 @@
 
       Best,<br>
       [insert astronaut name here] James or something
-    </div>
+    </div> -->
+    <div id="canvasContainer4" style="width: 20%; margin-left: 15%;"></div>
+
     <img src="3holo.png" style="width: 70%; margin-left: 15%; margin-top: 0px;"></img>
   </div> 
 
