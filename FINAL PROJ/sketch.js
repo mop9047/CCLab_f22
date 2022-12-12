@@ -650,9 +650,9 @@ let sketch4 = function(p){
     canvas.parent("canvasContainer4");
     p.rectMode(p.CENTER);
     inp = p.createInput();
-    inp.size(p.width / 2, p.height / 2);
+    inp.size(p.width *0.5, p.height *0.6);
     inp.style("position","inherit")
-    inp.position(p.width/2, p.height/2);
+    inp.position(p.width/2, p.height*4);
     inp.style("background-color", "rgba(255, 0, 0, 100)");
     inp.style("color", "rgba(255, 0, 0, 0)");
     inp.style("border", "none");
