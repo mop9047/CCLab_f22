@@ -5,11 +5,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-image: url(2holo.png);
   background-image: linear-gradient(rgb(58, 0, 91), rgb(10, 0, 19));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  justify-content: center;
 }
 
 #content{
@@ -31,15 +31,12 @@ p{
 
 .outerhologram{
   background-color: rgba(255, 255, 255, 0.229);
-  border-radius: 20px;
+  border-radius: 0px;
   border: solid;
   text-shadow: 2px 2px 10px #fff;
-  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 0);
   border-width: thick;
   font-family: 'Orbitron', sans-serif;
-  /* box-shadow: 5px 5px 30px 1px rgb(255, 87, 255),inset 5px 5px 40px 1px rgb(255, 87, 255); */
-  /* padding-left: 30px; */
-  width: 30%;
   margin: auto;
   margin-top: 5%;
   font-size: small;
@@ -63,8 +60,21 @@ h1{
 }
 
 canvas {
-  margin: auto;
+  margin:auto;
+  /* display: block;
+  border-radius: 10px;
+  border-width: 0px; */
+  /* border-color: rgb(0, 0, 0); */
+  /* border-left: 0;
+  border-right: 0;
+  position:relative */
+  /* box-shadow: 10px 10px 50px 8px rgb(0, 0, 0); */
   /* margin-top: 50px; */
+}
+
+#sketchHolder {
+  margin: 0 auto;
+  position: relative;
 }
 
 .parallax {
@@ -111,26 +121,4 @@ canvas {
   #wrapper{
     height: 2000px;
   }
-}
-
-.middlecons{
-  width: 50%;
-  margin-left:15%;
-  margin-top: -4px;
-  background-image: url(2holo.png);
-  background-size: 100%;
-  background-repeat: repeat-y;
-  text-align: center;
-  font-family: 'Press Start 2P', sans-serif;
-  color: #fff;
-  text-shadow: 2px 2px 10px #fff;
-  padding-left: 10%;
-  padding-right: 10%;
-  line-height: 200%;
-}
-
-.round{
-  /* /* border-radius: 100%;
-  width: 100%; */
-  background-color: rgba(127, 255, 212, 0); 
 }

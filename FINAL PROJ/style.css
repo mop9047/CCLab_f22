@@ -5,11 +5,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-image: url(2holo.png);
   background-image: linear-gradient(rgb(58, 0, 91), rgb(10, 0, 19));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  justify-content: center;
 }
 
 #content{
@@ -37,9 +37,6 @@ p{
   border-color: rgba(255, 255, 255, 0);
   border-width: thick;
   font-family: 'Orbitron', sans-serif;
-  /* box-shadow: 5px 5px 30px 1px rgb(255, 87, 255),inset 5px 5px 40px 1px rgb(255, 87, 255); */
-  /* padding-left: 30px; */
-  width: 90%;
   margin: auto;
   margin-top: 5%;
   font-size: small;
@@ -62,22 +59,31 @@ h1{
   letter-spacing: 20px;
 }
 
-.anti-canvas{
-  border: none;
-  box-shadow: 0px;
-}
-
 canvas {
-  display: block;
-  margin: auto;
+  margin:auto;
+  /* display: block;
   border-radius: 10px;
-  border-style: solid;
-  border-width: 0px;
+  border-width: 0px; */
   /* border-color: rgb(0, 0, 0); */
-  border-left: 0;
+  /* border-left: 0;
   border-right: 0;
+  position:relative */
   /* box-shadow: 10px 10px 50px 8px rgb(0, 0, 0); */
   /* margin-top: 50px; */
+}
+
+#sketchHolder {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  /* background-color: #fff; */
+}
+
+.message{
+  background-image: url(https://raw.githubusercontent.com/mop9047/CCLab_f22/main/FINAL%20PROJ/HOLOGRAM.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 5%;
 }
 
 .parallax {
@@ -117,33 +123,11 @@ canvas {
 }
 .wrapper {
   height: 1200px;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 @media (min-height: 768px) {
   #wrapper{
     height: 2000px;
   }
-}
-
-.middlecons{
-  width: 50%;
-  margin-left:15%;
-  margin-top: -4px;
-  background-image: url(2holo.png);
-  background-size: 100%;
-  background-repeat: repeat-y;
-  text-align: center;
-  font-family: 'Press Start 2P', sans-serif;
-  color: #fff;
-  text-shadow: 2px 2px 10px #fff;
-  padding-left: 10%;
-  padding-right: 10%;
-  line-height: 200%;
-}
-
-.round{
-  /* /* border-radius: 100%;
-  width: 100%; */
-  background-color: rgba(127, 255, 212, 0); 
 }

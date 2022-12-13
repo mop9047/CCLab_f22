@@ -3,8 +3,7 @@
 
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
-
+    <script src=http://CDN.JSDelivr.net/g/p5.js(p5.min.js+addons/p5.dom.js)></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,12 +14,8 @@
 
 
   <script src="libraries/p5.min.js"></script>
-  <script src="libraries/p5.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
-  <script language="javascript" src="libraries/p5.dom.js"></script> -->
-  <!-- Uncomment the line below if you use audio. -->
-  <script src="libraries/p5.sound.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
 </head>
 
 <body>
@@ -29,104 +24,82 @@
   </div>
 
   <p class="outerhologram">
-    [  Click on the hologram to move to next message  ]
+    [  Click on the arrows ◂ ▸ to move to next message  ]
   </p>
 
-  <div>
-    <img src="1holo.png" style="width: 70%; margin-left: 15%; margin-bottom: -5px;"></img>
-    
-    <!-- <div class="middlecons"> 
-      It has been far too long since I have reached the end of connection to earth.
-      I feel agony in my isolation. I am left with no one else but myself.
-      But my mission is far too important. All responsibilities rests on my shoulders.
-      It is too much for one man to handle<br><br><br>
-
-      I have decided to train an Artificial Intelligence in my ship's instructional system
-      to keep me company.
-      Alas, human consciousness is too difficult to pass on to things that are not human.
-      Although I think it is possible, it will take a long time before it is finished.
-      <br><br><br>
-
-      For now, I am left here with my thoughts, writing in the captain's log.
-
-      <br><br>
-
-      Best,<br>
-      [insert astronaut name here] James or something
-    </div> -->
-    <div id="canvasContainer4" style="width: 20%; margin-left: 15%;"></div>
-
-    <img src="3holo.png" style="width: 70%; margin-left: 15%; margin-top: 0px;"></img>
+  <div class ="message" style="width: 70%; display:block; margin: auto; aspect-ratio: 7/3;">  
+    <div id="sketchHolder" style="top: 30%;"></div>
   </div> 
+
+  <p class="outerhologram">
+    [  Scroll down to continue the story  ]
+  </p>
 
   <p class="outside">
     <br><br><br><br><br><br>
-    Training this device had posed to be a problem. I should have expected that it was going
-    to be this hard if I want it to have a proper conversation with me.<br><br>
+    This is the captain speaking, Your first mission is to decide whether 
+    you want a personal assistant to guide you.
+    It will give you useful help in future missions.
+    But be aware, it might go Sentient.
+    <br><br>
   </p>
 
   <p class="outerhologram" style="margin-top: 0px;">
-    <i class="material-icons" style="text-align: left;">settings_ethernet</i>
-    Move the mouse or click anywhere
-    <i class="material-icons" style="text-align: left;">settings_ethernet</i>
+    [ Choose Yes/No ]
   </p>
   <br>
+  <div style="display:block; margin: auto; width:50%">
+    <div id="canvasContainer5">
+      
+    </div>
+  </div>
+  
+  <p class="outside">
+    <br>
+    Great Choice but make sure you know what you are doing <br><br>
+  </p>
 
-  <div id="canvasContainer3" class="round"></div>
+  <p class="outerhologram" style="margin-bottom: 5%;">
+    [ Scroll down to continue ]
+  </p>
 
   <p class="outside">
     <br>
-    There is still some bugs, but at least it takes away most of my time <br><br><br><br>
+    It is a very long ride, why don't you just enjoy the view? Doesn't this make you think
+    how far humans have become? 
+    <br><br>
   </p>
 
+  <p class="outerhologram" style="margin-bottom: 3%;">
+    [ Move the mouse around to explore or click to pause hyperspeed ]
+  </p>
 
-    <!-- <p id="content" style="border-radius: 100%; width: 50%;">Mostly because flying seems like there is a goal.<br> 
-      Floating is about being there but going nowhere<br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br>
-    </p> -->
+  <div id="canvasContainer2" class="round"></div>
+
+  <p class="outside">
+    <br>
+    But to think of it, it had to be a global crisis to wake people up. 
+    Although we reached this far, we're pretty much brutes<br><br>
+  </p>
   
     <p class="outerhologram">
-      <i class="material-icons" style="text-align: left;">settings_ethernet</i>
-      Move the mouse to explore Spaceship
-      <i class="material-icons" style="text-align: left;">settings_ethernet</i>
+      [ Scroll down to let time pass by ]
     </p>
 
   <div class="wrapper">
     
   <!-- the following div will contain the p5 canvas. -->
-    <div id="canvasContainer2" class="sticky">
+    <div id="canvasContainer6" class="sticky" style="display: block; margin:auto">
     </div>
     <p id="inside">
       Mostly, I am left to ponder in my loneliness. Considering the nuances of our 
       humanity and my identity.
     </p>
 
-    <p id="inside">
+    <!-- <p id="inside">
       I have been travelling for approximately 2 million lightyears. 
       I have to admit that it's better than taking the subway. 
-    </p>
-
-    <p id="inside">
-      Although the view is majestic, sometimes I feel that too much light is blinding. 
-    </p>
-
-    <p id="inside">
-      As I get to experience the vastness of the universe, sometimes I wonder what is so 
-      special about humans.
-    </p>
-
-    <p id="inside">
-     What gives us the right to explore this far for our own need?
-    </p>
-
-    <p id="inside">
-      As much as I am the only one experiencing it, I can't help but to think that I am 
-      merely an observer.
-    </p>
-
-    <p id="inside">
-      Or am I simply running away from the responsibility on my shoulders?
-    </p>
+    </p> -->
 
     <p class="outerhologram" id ="inside" style="margin-left: 5%;">
       <i class="material-icons" style="text-align: left;">settings_ethernet</i>
@@ -137,7 +110,7 @@
   </div>
 
     <p class="outside" style="margin-top: 15%;">
-      I have finally found [insert planet name here]. Looking at it from afar
+      You have finally arrived! I have to be honest, I did not expect that you come this far.
     </p>
 
     <p class="outside" style="margin-top: 5%;">
@@ -149,14 +122,11 @@
     </p>
 
     <p class="outerhologram" style="margin-bottom: 3%;">
-      <i class="material-icons" style="text-align: left;">settings_ethernet</i>
-      Hover mouse on the triangle craters
-      <i class="material-icons" style="text-align: left;">settings_ethernet</i>
+      [ Hover mouse on the pink triangle craters ]
     </p>
 
   <div id="canvasContainer"></div>
 
-  <!-- the script tag below should always be at the bottom, right before the closing body tag -->
   <script src="sketch.js"></script>
 </body>
 
