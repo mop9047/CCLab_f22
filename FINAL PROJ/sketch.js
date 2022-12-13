@@ -1014,10 +1014,13 @@ let sketch5 = function(p){
       }
       
       p.mouseWheel=function (event) {
-        if(p.mouseX<p.width && p.mouseY>0){
+        if(p.mouseX<p.width && p.mouseY>0 && p.mouseY<p.height){
         pos += 0.1*event.delta;
         if(pos <350){
           return false;
+        }
+        if(pos>365){
+          pos -= 0.1*event.delta;
         }
       }
     }
