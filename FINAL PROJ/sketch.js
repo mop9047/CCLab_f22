@@ -907,10 +907,10 @@ let sketch5 = function(p){
   }
   
   p.mousePressed = function(){
-    if(p.mouseX>100 && p.mouseX<300){
+    if(p.mouseX>100 && p.mouseX<300 && p.mouseY>0){
       state = 1
     }
-    if(p.mouseX>500 && p.mouseX<700){
+    if(p.mouseX>500 && p.mouseX<700 && p.mouseY>0){
       state = 2
     }
   }
