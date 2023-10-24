@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-    <script src="sketch.js"></script>
+<html>
+<body>
+  <button id="runScript">Run Google Apps Script</button>
 
-  </head>
-  <body>
-    <main>
-    </main>
-    hello worlds update
-    <div id="c1"></div>
-    <div id="c2"></div>
-  </body>
+  <script>
+    document.getElementById('runScript').addEventListener('click', function() {
+      fetch('https://script.google.com/macros/s/AKfycbwA9zh_Ipd3MDL__qfwDkfuWcHxnpTkJHXE_Gw8P-Tv/dev', {
+        method: 'get'
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response if needed
+        console.log(data);
+      });
+    });
+  </script>
+</body>
 </html>
